@@ -8,6 +8,8 @@ import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app.routing.module';
 import { HomeModule } from './home/home.module';
 import { MaterialModule } from './compartilhado/componentes/material/material.module';
+import { VotoModule } from './voto/voto/voto.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MaterialModule } from './compartilhado/componentes/material/material.mo
     HttpClientModule,
     HomeModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    VotoModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

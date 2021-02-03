@@ -7,7 +7,7 @@ import { Voto } from './voto/voto';
 
 
 @Component({
-  selector: 'add-voto',
+  selector: 'voto',
   templateUrl: './voto.component.html',
 })
 export class VotoComponent  implements OnInit{
