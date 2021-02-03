@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { TituloModule } from '../compartilhado/componentes/titulo/titulo.module';
 import { HeaderComponent } from './header/header.component';
 import { PautaModule } from '../cad-pauta/cad-pauta/cad-pauta.module';
+import { listaPautaModule } from '../lista-pauta/lista-pauta/lista-pauta.module';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { PautaModule } from '../cad-pauta/cad-pauta/cad-pauta.module';
         CommonModule,
         RouterModule, 
         TituloModule,
-        PautaModule
+        PautaModule,
+        listaPautaModule
     ],
 
     exports: [

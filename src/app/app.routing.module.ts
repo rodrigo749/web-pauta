@@ -8,6 +8,8 @@ import { AuthGuard } from './core/auth/auth.guard';
 import { VotoComponent } from './voto/voto.component';
 import { HeaderComponent } from './home/header/header.component';
 import { PautaComponent } from './cad-pauta/cad-pauta.component';
+import { listaPautaComponent } from './lista-pauta/lista-pauta.component';
+
 
 const routes: Routes = [
     {
@@ -33,7 +35,12 @@ const routes: Routes = [
             {
                 path: 'cad-pauta',
                 component: PautaComponent,
-              },
+            },
+
+            {
+                path: 'lista-pauta',
+                component: listaPautaComponent,
+            },
 
             {
                 path: 'app-header',

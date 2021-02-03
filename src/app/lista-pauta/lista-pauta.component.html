@@ -1,0 +1,45 @@
+ <h2 class="h3 text-center mb-3 mt-3">Lista de Pautas</h2>
+
+<form class="mb-3" [formGroup]="pautaForm">
+<div class="form-row">
+    <div class="form-group col-md-4">
+        <label for="search">Pesquisar</label>
+        <input formControlName="pesquisa" type="text" class="form-control" placeholder="Pesquise pelo código da pauta" name="search">
+    </div>
+        <div class="form-group col-auto mt-2">
+          <button type="submit" class="btn btn-primary mt-4" (click)="pesquisa()">Pesquisar</button>
+        </div>
+        <div class="form-group col-auto mt-2">
+            <button type="submit" class="btn btn-primary mt-4" (click)="pesquisaTodos()">Pesquisar por todos</button>
+          </div>
+
+  </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-bordered text-center">
+        <thead class="thead-dark">
+          <tr>
+           
+            <th>Cod_Pauta</th>
+            <th>Pauta</th>
+            <th>Opções</th>
+              
+            
+          </tr>
+         
+        </thead>
+
+
+
+        <tbody class="table-light">
+            <tr *ngFor="let pauta of listaPauta" >
+             
+              <td>{{ pauta.id }}</td>
+              <td>{{ pauta.pauta }}</td>
+              <td> <button class="btn btn-info ml-2" (click)="editEquip(pauta.id)">Votar</button> </td>
+  
+            </tr>
+        </tbody>    
+</table>
+</div>
