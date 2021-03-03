@@ -1,13 +1,16 @@
-<form #form="ngForm" [formGroup]="loginForm" (submit)="login()" class="form-signin">
-    <h1>Acesso ao sistema</h1>
-    <div class="form-group">
-        <input formControlName="login" type="text" placeholder="CPF" class="form-control">
-        <app-msg-erro mensagem="O CPF é obrigatório!" *ngIf="loginForm.get('login').errors?.required && 
+<div class="jumbotron">
+    <form #form="ngForm" [formGroup]="loginForm" (submit)="login()" class="form-signin">
+        <h1>Acesso ao sistema de votos</h1>
+        <div class="form-group">
+            <input formControlName="login" type="text" placeholder="CPF" class="form-control">
+            <app-msg-erro mensagem="O CPF é obrigatório!" *ngIf="loginForm.get('login').errors?.required && 
             (form.submitted || loginForm.get('login').touched)">
-        </app-msg-erro>
-    </div>
+            </app-msg-erro>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Entrar</button>
+        <button type="submit" class="btn btn-primary">Entrar</button>
 
-    <app-msg-erro mensagem="Usuário ou senha inválidos!" *ngIf="loginError"></app-msg-erro>
-</form>
+        <app-msg-erro mensagem="Usuário ou senha inválidos!" *ngIf="loginError"></app-msg-erro>
+    </form>
+
+</div>

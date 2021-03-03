@@ -1,5 +1,5 @@
 export interface Lista_Pauta{
 
     id:number;
-    pauta:string;
+    id_pauta:string;
 }

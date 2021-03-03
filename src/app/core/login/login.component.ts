@@ -31,7 +31,7 @@ export class LoginComponent{
         this.authService
         .authenticate(login)
         .subscribe(
-            () => this.router.navigate(['home']), //informe a rota que irá abrir após o login 
+            () => this.router.navigate(['home/voto']), //informe a rota que irá abrir após o login 
             err => {
             console.log(err);
             this.loginError = true;

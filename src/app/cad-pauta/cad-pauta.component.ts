@@ -32,6 +32,7 @@ export class PautaComponent  implements OnInit{
     const novaPauta = this.pautaForm.getRawValue() as Pauta;
     this.pautaService.savePauta(novaPauta).subscribe(
       success =>{
+        alert('Voto cadastrado com sucesso')
         this.location.back();
       },
       error =>{

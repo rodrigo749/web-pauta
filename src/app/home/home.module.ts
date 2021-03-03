@@ -19,7 +19,8 @@ import { listaPautaModule } from '../lista-pauta/lista-pauta/lista-pauta.module'
         RouterModule, 
         TituloModule,
         PautaModule,
-        listaPautaModule
+        listaPautaModule,
+        
     ],
 
     exports: [

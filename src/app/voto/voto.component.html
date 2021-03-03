@@ -1,1 +1,32 @@
-<h1>Teste Voto</h1>
+
+<h2 class="h3 text-center mb-3 mt-3">Voto de pautas</h2>
+
+<div class="container-fluid col-md-8 mx-auto">
+    <form #form="ngForm" [formGroup]="votoForm" (submit)="submit()">
+        <div class="form-group col-md-7" >
+            <label for="id_pauta">Pauta:</label>
+            <select formControlName="id_pauta" class="form-control">
+                <option [value]="pauta.id" *ngFor="let pauta of pautas"> {{pauta.pauta}}</option>
+    
+            </select>
+        </div>
+
+
+
+        <div class="form-group col-md-7">
+            <label for="voto">Voto da pauta </label><br>
+            <select formControlName="voto" class="form-control">
+                <option value= "sim" >Sim</option>
+                <option value= "nao" >Não</option>
+                <option value= "indeterminado" >Indeterminado</option>
+            </select>
+        </div>
+       
+
+        <div class="form-group ml-3">
+            <button class="btn btn-success" type="submit">Gravar</button>
+            <button class="btn btn-primary ml-2" [routerLink]="'/home'">Voltar</button>
+        </div>
+</form>
+
+</div>

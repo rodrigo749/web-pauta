@@ -16,10 +16,10 @@ export class PautaService {
     constructor(private http:HttpClient){}
   
     getPauta(){
-        return this.http.get<Pauta[]>(`${API}/pauta`).pipe(take(1));
+        return this.http.get<Pauta[]>(`${API}pauta`).pipe(take(1));
     }
 
     savePauta(pauta : Pauta){
-      return this.http.post(`${API}/pauta`,pauta).pipe(take(1));
+      return this.http.post(`${API}pauta`,pauta).pipe(take(1));
   }
   }

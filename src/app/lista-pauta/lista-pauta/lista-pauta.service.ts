@@ -19,11 +19,11 @@ export class ListaPautaService {
 
     getAllPauta(id){
      
-        return this.http.get<Lista_Pauta[]>(`${API}/pauta/${id}`);
+        return this.http.get<Lista_Pauta[]>(`${API}pauta${id}`);
       }
 
       getAll(): Observable<Lista_Pauta[]>{
-        return this.http.get<Lista_Pauta[]>(`${API}/pauta`);
+        return this.http.get<Lista_Pauta[]>(`${API}pauta`);
       }
 
   }

@@ -17,10 +17,10 @@ export class VotoService {
     constructor(private http:HttpClient){}
   
     getVoto(){
-        return this.http.get<Voto[]>(`${API}/voto`).pipe(take(1));
+        return this.http.get<Voto[]>(`${API}voto`).pipe(take(1));
     }
 
     saveVoto(voto : Voto){
-      return this.http.post(`${API}/voto`,voto).pipe(take(1));
+      return this.http.post(`${API}voto`,voto).pipe(take(1));
   }
   }
